@@ -13,7 +13,7 @@
 	<tag:menu />
 	
 	<section class="content">
-		<form action="<c:url value="/index.htm"/>" method="post" class="login form" id="userlogin">
+		<form action="" method="post" class="login form" id="userlogin">
 			<label>User
 			<input name="username" type="text" autocomplete="off" class="inputbox" autofocus required />
 			</label>

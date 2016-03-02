@@ -17,13 +17,6 @@ public class IndexServlet extends HttpServlet {
 	
 	private static final String VIEW = "/WEB-INF/JSP/index.jsp";
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public IndexServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
