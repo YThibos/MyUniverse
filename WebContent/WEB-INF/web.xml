@@ -16,4 +16,8 @@
     <param-name>authorEmail</param-name>
     <param-value>yannick.thibos@gmail.com</param-value>
   </context-param>
+  <error-page>
+  	<exception-type>be.yannick.dao.DAOException</exception-type>
+  	<location>/WEB-INF/JSP/daoexception.jsp</location>
+  </error-page>
 </web-app>

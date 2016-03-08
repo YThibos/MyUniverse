@@ -20,3 +20,36 @@ PIXELSIZES
 100 = 6.25em;
 
 */
+
+/** GENERAL PAGE SETTINGS **/
+body {
+	font-family:			 		Verdana, Arial, sans-serif;
+	
+}
+
+/** GENERAL SETTINGS FOR CLASSES AND TAGS **/
+nav ul {
+	list-style:						none;
+}
+
+/** SPECIFIC CLASS SETTINGS **/
+
+/** SPECIFIC ID & ITEM SETTINGS **/
+nav#mainmenu ul li {
+	display: 						inline-block;
+}
+nav#mainmenu ul li a {
+	text-decoration: 				none;
+	color:							black;
+	background:						silver;
+}
+nav#mainmenu ul li a:hover {
+	color:							darkgray;
+}
+
+footer#pagefoot div {
+	float:							right;
+}
+footer#pagefoot {
+	font-size: 						0.725em;
+}

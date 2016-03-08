@@ -15,12 +15,15 @@
 	<section class="content">
 		<form action="" method="post" class="login form" id="userlogin">
 			<label>User
+			<span class="error">${errors.input}</span>
 			<input name="username" type="text" autocomplete="off" class="inputbox" autofocus required />
 			</label>
 			<label>Password
+			<span class="error">${errors.input}</span>
 			<input name="password" type="password" autocomplete="off" class="inputbox" autofocus required />
 			</label>
 			<input type="submit" value="Log in" class="formbutton"/>
+			<span class="error">${errors.user}</span>
 		</form>
 	</section>
 

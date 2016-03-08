@@ -4,12 +4,16 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import be.yannick.entities.User;
 
 public class UserDAO extends AbstractDAO {
 
 	private static final String SQL_SELECT_USERNAME = "SELECT id, username, password FROM users WHERE username=?";
+	
+	private static final Logger logger = Logger.getLogger(UserDAO.class.getName());
 	
 	public User findUser(String username) {
 		
@@ -32,6 +36,7 @@ public class UserDAO extends AbstractDAO {
 			
 		}
 		catch (SQLException ex ) {
+			logger.log(Level.SEVERE, "Error in database MyUniverse with findUser()", ex);
 			throw new DAOException(ex);
 		}
 		

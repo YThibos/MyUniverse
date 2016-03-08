@@ -60,19 +60,21 @@ public class UserLoginServlet extends HttpServlet {
 			if (user != null && user.getPassword().equals(password)) {
 				request.getSession().setAttribute("loggedin", true);
 				request.getSession().setAttribute("user", user);
+				System.out.println("User set to " + user.getUsername());
 			}
 			else {
 				errors.put("user", "User/password combination not found");
 			}
 		}
 		else {
-			errors.put("input", "Invalid username/password input");
+			errors.put("input", "Invalid input");
 		}
 		
 		if (errors.isEmpty()) {
 			response.sendRedirect(String.format(REDIRECT_URL, request.getContextPath()));
 		}
 		else {
+			request.setAttribute("errors", errors);
 			request.getRequestDispatcher(VIEW).forward(request, response);
 		}
 		
