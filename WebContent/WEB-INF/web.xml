@@ -4,10 +4,6 @@
   <welcome-file-list>
     <welcome-file>index.htm</welcome-file>
   </welcome-file-list>
-  <!--  <servlet>
-    <servlet-name>IndexServlet</servlet-name>
-    <servlet-class>be.yannick.servlets.IndexServlet</servlet-class>
-  </servlet> -->
   <context-param>
     <param-name>author</param-name>
     <param-value>Yannick Thibos</param-value>
@@ -17,7 +13,11 @@
     <param-value>yannick.thibos@gmail.com</param-value>
   </context-param>
   <error-page>
-  	<exception-type>be.yannick.dao.DAOException</exception-type>
-  	<location>/WEB-INF/JSP/daoexception.jsp</location>
+    <exception-type>be.yannick.dao.DAOException</exception-type>
+    <location>/WEB-INF/JSP/daoexception.jsp</location>
+  </error-page>
+  <error-page>
+    <error-code>404</error-code>
+    <location>/WEB-INF/JSP/404.jsp</location>
   </error-page>
 </web-app>

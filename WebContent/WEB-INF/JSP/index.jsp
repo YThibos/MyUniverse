@@ -11,15 +11,21 @@
 
 <body>
 
-	<!-- IMPORT NAV MENU -->
-	<tag:menu />
+	<!-- HEADER START -->
+	<header>
+	
+		<!-- IMPORT NAV MENU -->
+		<tag:menu />
+		
+	</header>
+	<!-- HEADER END -->
 
 	<!-- WELCOME SECTION START -->
 	<section class="content">
+	
 		<h1>Welcome ${sessionScope.user.username}</h1>
-		<c:if test="${empty sessionScope.user}">user empty</c:if>
-		<c:if test="${loggedin == true}">User logged in</c:if>
 		
+		<p>Nothing to see here .. for now.</p>
 	</section>
 
 	<!-- IMPORT FOOTER -->

@@ -23,7 +23,16 @@ public class IndexServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		// TODO Welcome things?
+		request.getRequestDispatcher(VIEW).forward(request, response);
+		
+	}
+	
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		if (request.getParameter("logout") != null) {
+			request.getSession().removeAttribute("user");
+		}
 		
 		request.getRequestDispatcher(VIEW).forward(request, response);
 		

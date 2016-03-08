@@ -1,5 +1,23 @@
 @CHARSET "UTF-8";
 
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
 /* 
 
 PIXELSIZES 
@@ -21,20 +39,39 @@ PIXELSIZES
 
 */
 
-/** GENERAL PAGE SETTINGS **/
+/*************** GENERAL PAGE SETTINGS **/
 body {
 	font-family:			 		Verdana, Arial, sans-serif;
 	
 }
+section.content {
+	width:							75%;
+	margin: 						0 auto;
+}
+header {
+	background-color: 				#58A6B0;
+}
+footer {
+	background-color: 				#58A6B0;
+}
 
-/** GENERAL SETTINGS FOR CLASSES AND TAGS **/
+/*************** GENERAL SETTINGS FOR CLASSES AND TAGS **/
 nav ul {
 	list-style:						none;
 }
 
-/** SPECIFIC CLASS SETTINGS **/
+/*************** SPECIFIC CLASS SETTINGS **/
 
-/** SPECIFIC ID & ITEM SETTINGS **/
+/*************** SPECIFIC ID & ITEM SETTINGS **/
+
+/** MAIN NAVIGATION MENU **/
+nav#mainmenu {
+	overflow: 						auto;
+}
+nav#mainmenu ul {
+	overflow: 						auto;
+	float:							left;
+}
 nav#mainmenu ul li {
 	display: 						inline-block;
 }
@@ -42,11 +79,19 @@ nav#mainmenu ul li a {
 	text-decoration: 				none;
 	color:							black;
 	background:						silver;
+	
+	padding:						5px 10px;
 }
 nav#mainmenu ul li a:hover {
-	color:							darkgray;
+	color:							white;
+}
+nav#mainmenu ul #logoutform {
+	
+	float:							right;
 }
 
+
+/** PAGE FOOTER **/
 footer#pagefoot div {
 	float:							right;
 }

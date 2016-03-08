@@ -10,7 +10,16 @@
 </head>
 
 <body>
-	<tag:menu/>
+	<!-- HEADER START -->
+	<header>
+	
+		<!-- IMPORT NAV MENU -->
+		<tag:menu />
+		
+	</header>
+	<!-- HEADER END -->
+	
+	<h1>ERROR 404 - PAGE NOT FOUND</h1>
 
 
 	<tag:footer/>

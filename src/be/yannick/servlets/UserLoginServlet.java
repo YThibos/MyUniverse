@@ -58,9 +58,7 @@ public class UserLoginServlet extends HttpServlet {
 			User user = userDAO.findUser(username);
 			
 			if (user != null && user.getPassword().equals(password)) {
-				request.getSession().setAttribute("loggedin", true);
 				request.getSession().setAttribute("user", user);
-				System.out.println("User set to " + user.getUsername());
 			}
 			else {
 				errors.put("user", "User/password combination not found");
