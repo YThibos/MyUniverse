@@ -4,10 +4,10 @@
   <welcome-file-list>
     <welcome-file>index.htm</welcome-file>
   </welcome-file-list>
-  <servlet>
-    <servlet-name>indexservlet</servlet-name>
+  <!--  <servlet>
+    <servlet-name>IndexServlet</servlet-name>
     <servlet-class>be.yannick.servlets.IndexServlet</servlet-class>
-  </servlet>
+  </servlet> -->
   <context-param>
     <param-name>author</param-name>
     <param-value>Yannick Thibos</param-value>

@@ -1,5 +1,6 @@
 <%@page contentType='text/html' pageEncoding='UTF-8' session='false'%>
 <%@ taglib prefix="tag" uri="http://yannick.be/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE HTML>
 <html>
@@ -16,6 +17,8 @@
 	<!-- WELCOME SECTION START -->
 	<section class="content">
 		<h1>Welcome ${sessionScope.user.username}</h1>
+		<c:if test="${empty sessionScope.user}">user empty</c:if>
+		
 	</section>
 
 	<!-- IMPORT FOOTER -->

@@ -70,7 +70,7 @@ public class UserLoginServlet extends HttpServlet {
 		}
 		
 		if (errors.isEmpty()) {
-			response.sendRedirect(String.format(REDIRECT_URL, request.getServletContext()));
+			response.sendRedirect(String.format(REDIRECT_URL, request.getContextPath()));
 		}
 		else {
 			request.getRequestDispatcher(VIEW).forward(request, response);
